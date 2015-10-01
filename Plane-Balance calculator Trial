@@ -1,0 +1,70 @@
+import random
+massL1A=random.randint(30,90)
+massL2A=random.randint(30,90)
+massL3A=random.randint(30,90)
+massL4A=random.randint(30,90)
+massL5A=random.randint(30,90)
+massL6A=random.randint(30,90)
+massL1B=random.randint(30,90)
+massL2B=random.randint(30,90)
+massL3B=random.randint(30,90)
+massL4B=random.randint(30,90)
+massL5B=random.randint(30,90)
+massL6B=random.randint(30,90)
+massR1A=random.randint(30,90)
+massR2A=random.randint(30,90)
+massR3A=random.randint(30,90)
+massR4A=random.randint(30,90)
+massR5A=random.randint(30,90)
+massR6A=random.randint(30,90)
+massR1B=random.randint(30,90)
+massR2B=random.randint(30,90)
+massR3B=random.randint(30,90)
+massR4B=random.randint(30,90)
+massR5B=random.randint(30,90)
+massR6B=random.randint(30,90)
+#gravity*mass*distance from piviot point
+L1AForce=9.81*2*massL1A
+L2AForce=9.81*2*massL2A
+L3AForce=9.81*2*massL3A
+L4AForce=9.81*2*massL4A
+L5AForce=9.81*2*massL5A
+L6AForce=9.81*2*massL6A
+#all LA passengers
+LANeutons=L1AForce+L2AForce+L3AForce+L4AForce+L5AForce+L6AForce
+L1Bforce=9.81*3*massL1B
+L2Bforce=9.81*3*massL2B
+L3Bforce=9.81*3*massL3B
+L4Bforce=9.81*3*massL4B
+L5Bforce=9.81*3*massL5B
+L6Bforce=9.81*3*massL6B
+#all LB passengers
+LBNeutons=L1Bforce+L2Bforce+L3Bforce+L4Bforce+L5Bforce+L6Bforce
+R1AForce=9.81*2*massR1A
+R2AForce=9.81*2*massR2A
+R3AForce=9.81*2*massR3A
+R4AForce=9.81*2*massR4A
+R5AForce=9.81*2*massR5A
+R6AForce=9.81*2*massR6A
+#all RA passengers
+RANeutons=R1AForce+R2AForce+R3AForce+R4AForce+R5AForce+R6AForce
+R1Bforce=9.81*3*massR1B
+R2Bforce=9.81*3*massR2B
+R3Bforce=9.81*3*massR3B
+R4Bforce=9.81*3*massR4B
+R5Bforce=9.81*3*massR5B
+R6Bforce=9.81*3*massR6B
+#all RB passengers
+RBNeutons=R1Bforce+R2Bforce+R3Bforce+R4Bforce+R5Bforce+R6Bforce
+print("left row A Force",LANeutons)
+print("Left row B Force",LBNeutons)
+print("Left total Force",LANeutons+LBNeutons)
+print("Right row A Force",RANeutons)
+print("Right row B Force",RBNeutons)
+print("Right total Force",RANeutons+RBNeutons)
+Lefttotal=LANeutons+LBNeutons
+Righttotal=RANeutons+RBNeutons
+Air=Lefttotal-Righttotal
+print("Aircraft +left -Right Balance",Air)
+if Air<250 or Air>-250:
+    print(" left Right Balance Ok")
